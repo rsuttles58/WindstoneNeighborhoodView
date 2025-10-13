@@ -112,7 +112,7 @@ function App() {
   return (
     <div className="App">
       <header className="app-header">
-        <h1>Windstone Neighborhood Events</h1>
+        <h1>Windstone Holiday Decorations</h1>
         <p>Discover and share decorations in Windstone!</p>
       </header>
 
