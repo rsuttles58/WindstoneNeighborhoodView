@@ -6,12 +6,12 @@ import FeedbackModal from './components/FeedbackModal';
 import { locationApi } from './services/api';
 import { Location, HolidayType } from './types';
 import { getActiveHolidays } from './config/holidays';
-import { useTheme } from './hooks/useTheme';
+// import { useTheme } from './hooks/useTheme';
 import './App.css';
 
 function App() {
-  // Initialize theme system
-  const { themeName } = useTheme();
+  // Initialize theme system - TEMPORARILY DISABLED FOR DEBUGGING
+  // const { themeName } = useTheme();
   
   const activeHolidays = getActiveHolidays();
   const initialHoliday = activeHolidays.length === 1 ? activeHolidays[0] : 'all';
@@ -105,8 +105,8 @@ function App() {
   return (
     <div className="App">
       <header className="app-header">
-        <h1>Windstone Neighborhood Holiday Decorations</h1>
-        <p>Discover and share amazing holiday decorations in Windstone!</p>
+        <h1>Windstone Neighborhood Events</h1>
+        <p>Discover and share events in Windstone!</p>
       </header>
 
       <div className="app-container">
