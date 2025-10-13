@@ -13,8 +13,9 @@ function App() {
   // Initialize theme system
   useTheme();
   
-  const activeHolidays = getActiveHolidays();
-  const initialHoliday = activeHolidays.length === 1 ? activeHolidays[0] : 'all';
+  // For now, only allow Halloween
+  const activeHolidays = ['halloween'] as HolidayType[];
+  const initialHoliday = 'halloween' as HolidayType;
   
   const [locations, setLocations] = useState<Location[]>([]);
   const [filteredLocations, setFilteredLocations] = useState<Location[]>([]);

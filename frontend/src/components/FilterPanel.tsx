@@ -86,7 +86,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
 
   return (
     <div className="filter-panel">
-      <h3>Filter by Holiday</h3>
+      <h3>Filter by Event/Holiday</h3>
       <div className="filter-buttons">
         {/* Always show "All" button for filtering all holidays */}
         <button
