@@ -59,6 +59,12 @@ function App() {
     holiday: HolidayType | 'all',
     decorations: string[]
   ) => {
+    // Safety check: if locs is undefined or null, use empty array
+    if (!locs) {
+      setFilteredLocations([]);
+      return;
+    }
+
     let filtered = locs;
 
     // Filter by holiday
