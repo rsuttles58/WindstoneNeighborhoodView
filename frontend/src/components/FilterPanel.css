@@ -1,0 +1,179 @@
+.filter-panel {
+  background: var(--color-surface);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-panel h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  padding: 10px 20px;
+  border: 2px solid #ddd;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  border-color: #666;
+  transform: translateY(-2px);
+}
+
+.filter-buttons button.active {
+  border-color: var(--color-secondary);
+  background: var(--color-secondary);
+  color: white;
+}
+
+.filter-buttons button.halloween.active {
+  background: #ff6b35;
+  border-color: #ff6b35;
+  color: white;
+}
+
+.filter-buttons button.christmas.active {
+  background: #d62828;
+  border-color: #d62828;
+  color: white;
+}
+
+.filter-buttons button.easter.active {
+  background: #f77fbe;
+  border-color: #f77fbe;
+  color: white;
+}
+
+/* Decoration Filter Section */
+.decoration-filter-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #eee;
+}
+
+.decoration-filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.decoration-filter-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+.toggle-decorations-button {
+  padding: 6px 12px;
+  background: var(--color-secondary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-decorations-button:hover {
+  background: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.decoration-filter-content {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter-actions {
+  margin-bottom: 15px;
+}
+
+.clear-filters-button {
+  padding: 8px 16px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clear-filters-button:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.decoration-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.decoration-button {
+  padding: 10px 16px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: capitalize;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.decoration-button:hover {
+  border-color: var(--color-secondary);
+  background: var(--color-background);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.decoration-button.selected {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: white;
+  font-weight: 600;
+}
+
+.decoration-button.selected:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.no-decorations {
+  text-align: center;
+  color: var(--color-textLight);
+  font-style: italic;
+  padding: 20px;
+}
+
