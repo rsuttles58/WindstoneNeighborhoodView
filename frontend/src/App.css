@@ -34,7 +34,7 @@ body {
 }
 
 .app-header {
-  background: url(/HH_purple.png) center/cover no-repeat;
+  background: url('/HH_purple.png') center/cover no-repeat;
   color: white;
   padding: 30px 20px;
   text-align: center;
@@ -42,7 +42,6 @@ body {
   position: relative;
   overflow: hidden;
   transition: background 0.5s ease;
-  min-height: 150px;
 }
 
 .app-header::before {
