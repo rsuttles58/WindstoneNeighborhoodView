@@ -6,12 +6,12 @@ import FeedbackModal from './components/FeedbackModal';
 import { locationApi } from './services/api';
 import { Location, HolidayType } from './types';
 import { getActiveHolidays } from './config/holidays';
-// import { useTheme } from './hooks/useTheme';
+import { useTheme } from './hooks/useTheme';
 import './App.css';
 
 function App() {
-  // Initialize theme system - TEMPORARILY DISABLED FOR DEBUGGING
-  // const { themeName } = useTheme();
+  // Initialize theme system
+  useTheme();
   
   const activeHolidays = getActiveHolidays();
   const initialHoliday = activeHolidays.length === 1 ? activeHolidays[0] : 'all';
