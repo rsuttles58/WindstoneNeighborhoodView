@@ -11,14 +11,17 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Trust proxy - Railway is a proxy
-app.set('trust proxy', true);
+// Trust proxy - Railway/Render proxy setup
+// Trust only the first proxy (Railway/Render) to prevent IP spoofing
+app.set('trust proxy', 1);
 
 // Rate limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // Limit each IP to 100 requests per windowMs
   message: 'Too many requests from this IP, please try again later.',
+  standardHeaders: true,
+  legacyHeaders: false,
 });
 
 // Stricter rate limit for POST requests
@@ -26,6 +29,8 @@ const createLimiter = rateLimit({
   windowMs: 60 * 60 * 1000, // 1 hour
   max: 10, // Limit each IP to 10 POST requests per hour
   message: 'Too many locations submitted, please try again later.',
+  standardHeaders: true,
+  legacyHeaders: false,
 });
 
 // Middleware
