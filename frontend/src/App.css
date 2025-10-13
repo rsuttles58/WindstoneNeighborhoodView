@@ -34,7 +34,7 @@ body {
 }
 
 .app-header {
-  background: var(--color-headerGradient);
+  background: url('/HH_purple.png') center/cover no-repeat;
   color: white;
   padding: 30px 20px;
   text-align: center;
@@ -51,7 +51,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--color-headerOverlay);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 0;
   transition: background 0.3s ease;
 }
