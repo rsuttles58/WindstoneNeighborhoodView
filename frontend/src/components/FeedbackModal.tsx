@@ -8,7 +8,7 @@ interface FeedbackModalProps {
 
 const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose }) => {
   const [feedback, setFeedback] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -30,8 +30,7 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose }) => {
           },
           body: JSON.stringify({
             feedback,
-            email: email || undefined,
-            timestamp: new Date().toISOString(),
+            name: name || undefined,
           }),
         }
       );
@@ -41,7 +40,7 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose }) => {
         setTimeout(() => {
           onClose();
           setFeedback('');
-          setEmail('');
+          setName('');
           setSubmitted(false);
         }, 2000);
       } else {
@@ -75,8 +74,7 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose }) => {
             <h2>Send Feedback</h2>
             <p className="feedback-subtitle">
               Share suggestions, report issues, or send a message to the admin.
-              Your feedback is private and will not be visible to other
-              neighbors.
+              Feedback is stored privately for review.
             </p>
 
             <form onSubmit={handleSubmit}>
@@ -93,13 +91,13 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose }) => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">Your Email (optional)</label>
+                <label htmlFor="name">Your Name or Email (optional)</label>
                 <input
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="If you'd like a response"
+                  type="text"
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Your name or email"
                 />
               </div>
 
