@@ -125,7 +125,7 @@ function App() {
             {showForm ? '🗺️ View Map' : '➕ Add Location'}
           </button>
 
-          {!showForm && (
+          {!showForm && filteredLocations && (
             <div className="stats">
               <p>
                 Showing <strong>{filteredLocations.length}</strong> location
@@ -152,7 +152,7 @@ function App() {
         ) : (
           <div className="map-container">
             <Map
-              locations={filteredLocations}
+              locations={filteredLocations || []}
               center={mapCenter}
               bounds={mapBounds}
             />
