@@ -86,17 +86,9 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
 
   return (
     <div className="filter-panel">
-      <h3>Filter by Event/Holiday</h3>
+      <h3>Filter by Holiday</h3>
       <div className="filter-buttons">
-        {/* Always show "All" button for filtering all holidays */}
-        <button
-          className={selectedHoliday === 'all' ? 'active' : ''}
-          onClick={() => onHolidayChange('all')}
-        >
-          All
-        </button>
-        
-        {/* Always show all holiday options for filtering, regardless of active season */}
+        {/* Temporarily only showing Halloween */}
         <button
           className={selectedHoliday === 'halloween' ? 'active halloween' : 'halloween'}
           onClick={() => onHolidayChange('halloween')}
@@ -104,6 +96,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
           🎃 Halloween
         </button>
         
+        {/* Other holidays temporarily hidden 
         <button
           className={selectedHoliday === 'christmas' ? 'active christmas' : 'christmas'}
           onClick={() => onHolidayChange('christmas')}
@@ -117,6 +110,7 @@ const FilterPanel: React.FC<FilterPanelProps> = ({
         >
           🐰 Easter
         </button>
+        */}
       </div>
 
       {/* Decoration Filter Section */}
