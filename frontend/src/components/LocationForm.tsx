@@ -27,7 +27,15 @@ const LocationForm: React.FC<LocationFormProps> = ({ onSubmitSuccess }) => {
     // Fetch available property tags
     locationApi.getPropertyTags()
       .then(tags => setPropertyTags(tags))
-      .catch(err => console.error('Failed to load property tags:', err));
+      .catch(err => {
+        console.error('Failed to load property tags:', err);
+        // Fallback to hardcoded tags if API fails
+        setPropertyTags({
+          halloween: ['halloween_lights', 'pumpkins', 'scary_props', 'inflatables', 'fog_machine', 'skeleton_display', 'witch_decor', 'graveyard'],
+          christmas: ['christmas_lights', 'santa_display', 'nativity_scene', 'animated_display', 'music', 'reindeer', 'snowman', 'inflatable_santa'],
+          easter: ['easter_eggs', 'bunny_display', 'pastel_lights', 'egg_hunt', 'easter_baskets', 'spring_flowers']
+        });
+      });
   }, []);
 
   const handleInputChange = (
