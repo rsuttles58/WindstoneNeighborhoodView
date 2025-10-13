@@ -7,6 +7,7 @@ import { locationApi } from './services/api';
 import { Location, HolidayType } from './types';
 import { getActiveHolidays } from './config/holidays';
 import { useTheme } from './hooks/useTheme';
+import HalloweenBanner from './assets/HH_purple.png';
 import './App.css';
 
 function App() {
@@ -111,7 +112,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="app-header">
+      <header className="app-header" style={{ backgroundImage: `url(${HalloweenBanner})` }}>
         <h1>Windstone Holiday Decorations</h1>
         <p>Discover and share decorations in Windstone!</p>
       </header>
