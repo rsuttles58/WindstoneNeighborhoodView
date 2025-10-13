@@ -40,10 +40,18 @@ export const sendFeedbackEmail = async (data: FeedbackEmail): Promise<void> => {
     // Send via SendGrid
     try {
       await sgMail.send(emailContent);
-      console.log('✅ Feedback email sent successfully via SendGrid');
-    } catch (error) {
-      console.error('❌ Error sending feedback email:', error);
-      throw new Error('Failed to send feedback email');
+      console.log('✅ Feedback email sent successfully via SendGrid to:', recipientEmail);
+    } catch (error: any) {
+      console.error('❌ SendGrid error:', error.code, error.message);
+      console.log('⚠️  Falling back to console logging...');
+      // Fall back to console logging instead of throwing
+      console.log('📧 FEEDBACK RECEIVED (SendGrid failed):');
+      console.log('  To:', recipientEmail);
+      console.log('  From:', data.email || 'Anonymous');
+      console.log('  Time:', new Date(data.timestamp).toLocaleString());
+      console.log('  Message:', data.feedback);
+      console.log('─'.repeat(50));
+      // Don't throw - feedback is saved via console
     }
   } else {
     // No email service - just log to console
