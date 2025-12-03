@@ -7,10 +7,10 @@
   transition: background-color 0.3s ease;
 }
 
-/* Christmas theme - Winter Mint background for filter panel */
+/* Christmas theme - Sage Beige background for filter panel */
 body.theme-christmas .filter-panel {
-  background: #F0FFF4;
-  border: 2px solid #C8E6C9;
+  background: #EAF0E6;
+  border: 2px solid #D4E4CF;
 }
 
 .filter-panel h3 {
