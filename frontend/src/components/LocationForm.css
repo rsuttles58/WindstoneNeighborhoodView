@@ -82,7 +82,7 @@ body.theme-christmas .location-form {
 .submit-button {
   width: 100%;
   padding: 12px;
-  background: var(--color-secondary);
+  background: var(--color-primary);
   color: white;
   border: none;
   border-radius: 6px;
@@ -93,7 +93,7 @@ body.theme-christmas .location-form {
 }
 
 .submit-button:hover:not(:disabled) {
-  background: var(--color-primary);
+  background: var(--color-primaryDark);
 }
 
 .submit-button:disabled {
