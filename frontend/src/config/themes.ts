@@ -39,7 +39,7 @@ export const themes: Record<HolidayType | 'default', Theme> = {
       primaryDark: '#8B0000',    // Dark Red
       secondary: '#165B33',      // Christmas Green
       accent: '#FFD700',         // Gold
-      background: '#f8f9fa',     // Light background
+      background: '#FFFAF0',     // Snowy Cream (soft ivory)
       surface: '#ffffff',        // White surface
       text: '#2c3e50',           // Dark text
       textLight: '#555555',      // Gray text
