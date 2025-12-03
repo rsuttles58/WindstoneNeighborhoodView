@@ -96,6 +96,11 @@ const LocationForm: React.FC<LocationFormProps> = ({ onSubmitSuccess }) => {
 
   const availableProperties = propertyTags ? propertyTags[formData.holiday_type] : [];
 
+  // Debug logging
+  console.log('PropertyTags:', propertyTags);
+  console.log('Selected holiday:', formData.holiday_type);
+  console.log('Available properties:', availableProperties);
+
   return (
     <div className="location-form">
       <h2>Submit a Decoration Location</h2>

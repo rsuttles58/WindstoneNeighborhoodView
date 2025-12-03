@@ -7,16 +7,16 @@ import { locationApi } from './services/api';
 import { Location, HolidayType } from './types';
 import { getActiveHolidays } from './config/holidays';
 import { useTheme } from './hooks/useTheme';
-import HalloweenBanner from './assets/HH_purple.png';
+import ChristmasBanner from './assets/christmas_banner.png';
 import './App.css';
 
 function App() {
   // Initialize theme system
   useTheme();
   
-  // For now, only allow Halloween
-  const activeHolidays = ['halloween'] as HolidayType[];
-  const initialHoliday = 'halloween' as HolidayType;
+  // Switch to Christmas season
+  const activeHolidays = ['christmas'] as HolidayType[];
+  const initialHoliday = 'christmas' as HolidayType;
   
   const [locations, setLocations] = useState<Location[]>([]);
   const [filteredLocations, setFilteredLocations] = useState<Location[]>([]);
@@ -112,9 +112,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="app-header" style={{ backgroundImage: `url(${HalloweenBanner})` }}>
-        <h1>Windstone Holiday Decorations</h1>
-        <p>Discover and share decorations in Windstone!</p>
+      <header className="app-header" style={{ backgroundImage: `url(${ChristmasBanner})` }}>
+        <h1>Windstone Christmas Lights Tour</h1>
+        <p>Discover the best Christmas lights in Windstone!</p>
       </header>
 
       <div className="app-container">
