@@ -119,6 +119,12 @@ body {
   transition: background-color 0.3s ease;
 }
 
+/* Christmas theme - Winter Mint background for stats */
+body.theme-christmas .stats {
+  background: #F0FFF4;
+  border: 2px solid #C8E6C9;
+}
+
 .stats p {
   margin: 0;
   color: var(--color-textLight);
