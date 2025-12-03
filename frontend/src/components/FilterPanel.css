@@ -1,6 +1,6 @@
 .filter-panel {
   background: var(--color-surface);
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -68,32 +68,31 @@ body.theme-christmas .filter-panel {
 
 /* Decoration Filter Section */
 .decoration-filter-section {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 2px solid #eee;
+  margin-top: 0;
 }
 
 .decoration-filter-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .decoration-filter-header h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: 14px;
+  font-weight: 500;
   color: var(--color-text);
   transition: color 0.3s ease;
 }
 
 .toggle-decorations-button {
-  padding: 6px 12px;
+  padding: 4px 10px;
   background: var(--color-secondary);
   color: white;
   border: none;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -119,16 +118,16 @@ body.theme-christmas .filter-panel {
 }
 
 .filter-actions {
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .clear-filters-button {
-  padding: 8px 16px;
+  padding: 5px 10px;
   background: #dc3545;
   color: white;
   border: none;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -141,20 +140,20 @@ body.theme-christmas .filter-panel {
 .decoration-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 6px;
 }
 
 .decoration-button {
-  padding: 10px 16px;
+  padding: 6px 10px;
   background: var(--color-surface);
   color: var(--color-text);
-  border: 2px solid #ddd;
-  border-radius: 6px;
+  border: 1.5px solid #ddd;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   text-transform: capitalize;
   transition: all 0.2s ease;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .decoration-button:hover {
