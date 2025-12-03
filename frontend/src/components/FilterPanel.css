@@ -7,6 +7,12 @@
   transition: background-color 0.3s ease;
 }
 
+/* Christmas theme - Winter Mint background for filter panel */
+body.theme-christmas .filter-panel {
+  background: #F0FFF4;
+  border: 2px solid #C8E6C9;
+}
+
 .filter-panel h3 {
   margin: 0 0 15px 0;
   font-size: 18px;
