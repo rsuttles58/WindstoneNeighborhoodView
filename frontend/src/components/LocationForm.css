@@ -8,10 +8,10 @@
   transition: background-color 0.3s ease;
 }
 
-/* Christmas theme - Frosty blue background for form */
+/* Christmas theme - Sage Beige background for form */
 body.theme-christmas .location-form {
-  background: #F0F8FF;
-  border: 2px solid #D6E9F8;
+  background: #EAF0E6;
+  border: 2px solid #D4E4CF;
 }
 
 .location-form h2 {
